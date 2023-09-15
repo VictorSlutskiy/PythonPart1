@@ -1,4 +1,3 @@
-import os
 
 jewelery = {"Rolex": ["Платина", 300000, 1],
             "Кольцо": ["Золото", 1150, 5],
@@ -48,7 +47,6 @@ while 1:
         else:
             print("Данного товара нет в наличии")
     elif i == '6':
-        os.system('cls')
         if my_basket != 0:
             print(f"Вы купили вещей на {my_basket} р.")
         print("До свидания")
