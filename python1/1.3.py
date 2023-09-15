@@ -18,14 +18,16 @@ while 1:
             except ValueError:
                 print("Введите только положительное число")
                 continue
-            for i in range(amount):
-                while True:
-                    try:
-                        item = float(input("Введите элемент: "))
-                        my_list.append(item)
-                        break
-                    except ValueError:
-                        print("Введите только числа")
+            break
+        for i in range(amount):
+            while True:
+                try:
+                    item = float(input("Введите элемент: "))
+                    my_list.append(item)
+                    break
+                except ValueError:
+                    print("Введите только числа")
+
     elif choice == "2":
         print("My list - ", my_list)
     elif choice == "2":
