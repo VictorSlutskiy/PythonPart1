@@ -12,24 +12,20 @@ while 1:
           )
     choice = input()
     if choice == "1":
-        while 1:
-            amount = input("Введите количество элементов списка: ")
-            if amount.isdigit():
-                break
-            else:
-                print("Введите только цифры ")
-        for i in range(int(amount)):
-            while 1:
-                minus = 0
-                item = input("Введите элементы ")
-                if item.isdigit():
-                    break
-                else:
-                    print("Введите только цифры ")
-            if minus == 1:
-                my_list.append(int(-1 * item))
-            else:
-                my_list.append(int(item))
+        while True:
+            try:
+                amount = int(input("Введите количество элементов: "))
+            except ValueError:
+                print("Введите только положительное число")
+                continue
+            for i in range(amount):
+                while True:
+                    try:
+                        item = float(input("Введите элемент: "))
+                        my_list.append(item)
+                        break
+                    except ValueError:
+                        print("Введите только числа")
     elif choice == "2":
         print("My list - ", my_list)
     elif choice == "2":

@@ -1,8 +1,5 @@
 import math
 
-
-# Пример использования:
-
 def get_float_input(prompt):
     while True:
         try:
