@@ -7,7 +7,7 @@ try:
             F1.write(line + "\n")
     with open("F1.txt", "r") as F1, open("F2.txt", "w") as F2:
         lines = F1.readlines()
-        for num,line in enumerate(lines):
+        for num, line in enumerate(lines):
             if num % 2 != 1:
                 F2.write(line)
     with open("F2.txt", "r") as F2:
